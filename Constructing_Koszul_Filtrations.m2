@@ -121,8 +121,8 @@ KF = partialKoszulFiltration(R,F)
 -----------------------------------------------------------------------
 
 partialLinearFlags = (R,L,I)  -> (
-    linearIdeals = unique apply(subsets L, a->trim promote(ideal(a),R));
-    Flags = {{I}}; i = numgens trim I;
+    linearIdeals := unique apply(subsets L, a->trim promote(ideal(a),R));
+    Flags := {{I}}; i := numgens trim I;
     while  i > 0 and #Flags =!= 0 do (
         Flagsnew = {}; i = i - 1;    
         for F in Flags do (
