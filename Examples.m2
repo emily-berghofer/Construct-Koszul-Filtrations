@@ -1,9 +1,12 @@
 clearAll
 load "Constructing_Koszul_Filtrations.m2"
 
-
+----------------------------------------------------
+--Example usage of the algorithms
+----------------------------------------------------
 
 --Example 1. 
+
 S=QQ[x_1..x_6, MonomialOrder=>Lex]
 I=ideal(x_1*x_4-x_2*x_3, x_2*x_5-x_3*x_4, x_3*x_6-x_4*x_5, x_2*x_6-x_4^2, x_1*x_6-x_3*x_4, x_1*x_5-x_3^2)
 --I is a prime ideal
@@ -19,9 +22,12 @@ KF=partialKoszulFiltration(R,LF)
 last KF
 ---Yes!
 
-
+--===========================================
 --Toric examples
+---------------------------------------------
+
 --Example 2. Pinched Veronese
+
 S=QQ[x,y,z]
 M=flatten entries basis(3,S)
 M=delete(x*y*z,M)
@@ -41,6 +47,7 @@ last KF
 -----------
 
 --Example 3. Base ring of a transversal polymatroid
+
 S=QQ[x_1..x_4, MonomialOrder=>Lex]
 X_1={x_1,x_2}
 X_2={x_1,x_3}
