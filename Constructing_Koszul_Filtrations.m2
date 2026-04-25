@@ -30,7 +30,7 @@
 
 -----------------------------------------------------------------------
 
-Partiallinearfiltration = (R,L) -> (
+partialLinearFiltration = (R,L) -> (
     linearIdeals := unique apply(subsets L, a->trim promote(ideal(a),R));
     F := {{promote(ideal(),R)}};
     newIdeals := {};
